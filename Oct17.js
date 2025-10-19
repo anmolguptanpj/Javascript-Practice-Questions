@@ -86,18 +86,74 @@
 
 // console.log(findMissing([1,2,3,5,6,7,8,9,10]))
 
-function countdown(seconds) {
-  console.log(seconds); // Print first immediately
 
-  const timer = setInterval(() => {
-    seconds--;
-    console.log(seconds);
+//Q8
+// const countdown =(seconds)=>{
+//     console.log(seconds);
+//     let timer = setInterval(
+//         ()=>{
+//             seconds--,
+//             console.log(seconds);
+//             if(seconds<=0){
+//                 clearInterval(timer)
+//                 console.log("timer completd")
+//             }
+//         },1000
+//     )
+   
+//     }
 
-    if (seconds <= 0) { 
-      clearInterval(timer);
-      console.log("Countdown complete! 🎉");
-    }
-  }, 1000);
-}
- 
-countdown(5); // ✅ No console.log() wrapper here
+// countdown(5)
+
+
+
+
+//Q9
+
+// function debounce(func,delay) {
+//     let timer;
+
+//     return function (...args){
+//         clearTimeout(timer);
+//         timer = setTimeout(()=>{
+//             func.apply(this,args);// call func after display
+//             },delay)
+//     };
+// ;}
+
+// function searchHandler(query){
+//     console.log("searching for:",query)
+    
+// }
+
+// const debounceSearch = debounce(searchHandler,500);
+
+// debounceSearch("h");
+// debounceSearch("he");
+// debounceSearch("hel");
+// debounceSearch("hell");
+// debounceSearch("hello");
+
+
+//Q10
+
+// async function getUsers() {
+//     try { 
+//         const response = await fetch ("https://jsonplaceholder.typicode.com/users");
+
+//         if(!response.ok){
+//             throw new Error("Network response was not okay");
+            
+//         }
+
+//         const users = await response.json();
+
+//         console.log("List of User Names:");
+//         users.forEach(users=>console.log(users.name))
+//     } catch (error) {
+//         console.log("Error fetching users:",error)
+//     }
+    
+// }
+
+// console.log(getUsers())
