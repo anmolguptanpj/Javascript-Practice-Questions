@@ -157,3 +157,66 @@
 // }
 
 // console.log(getUsers())
+
+
+//Q11
+
+// import fs from "fs";
+
+// const STORAGE_FILE = "./localstorage.json";
+
+// // Read from file
+// function readStorage() {
+//   if (!fs.existsSync(STORAGE_FILE)) {
+//     fs.writeFileSync(STORAGE_FILE, "{}"); // create empty JSON if missing
+//   }
+//   const data = fs.readFileSync(STORAGE_FILE, "utf-8");
+//   return JSON.parse(data || "{}");
+// }
+
+// // Write to file
+// function writeStorage(data) {
+//   fs.writeFileSync(STORAGE_FILE, JSON.stringify(data, null, 2));
+// }
+
+// // Save note
+// function saveToLocalStorage(noteId, noteData) {
+//   const storage = readStorage();       // load current storage
+//   storage[noteId] = noteData;          // add or update note
+//   writeStorage(storage);               // save changes
+//   console.log(`${noteId} got saved`);
+// }
+
+// // Retrieve note
+// function getFromLocalStorage(noteId) {
+//   const storage = readStorage();       // read current storage
+//   const note = storage[noteId];
+//   if (note) {
+//     console.log(`${noteId} retrieved successfully`);
+//     console.log(note);
+//   } else {
+//     console.log(`${noteId} not found`);
+//   }
+// }
+
+// // Example usage
+// saveToLocalStorage("note1", { title: "Hello", body: "This is a test note" });
+// getFromLocalStorage("note1");
+
+
+// Q12
+
+// Array.prototype.myMap = function (callback) {
+//     const result = [];
+
+//     for(let i = 0; i< this.length; i++){
+//         if(this.hasOwnProperty(i)){
+//             result.push(callback(this[i],i,this));
+//         }
+//     }
+
+//     return result
+// };
+
+// const output = [1,2,3].myMap(x=>x*2)
+// console.log(output);
