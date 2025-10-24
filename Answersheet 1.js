@@ -62,7 +62,7 @@ for (let word of words ){
    if (freq[word]>0) {freq[word]=freq[word]+1} 
    else {(freq[word]=1)}
 }
-return freq}
+return freq }
 
 
 console.log(wordFrequency("hello world hello"))
