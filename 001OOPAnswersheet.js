@@ -59,18 +59,3 @@
 // console.log(product1.restock(25))
 // console.log(product1.getDetails())
 
-
-class Customer{
-
-
-        constructor(name,credit,debit,type,date,balance,transaction){
-            this.name = name
-            this.credit = credit
-            this.type = type
-            this.date = date 
-            this.balance=balance
-            this.debit= debit
-            this.credit= credit
-
-        }
-}
