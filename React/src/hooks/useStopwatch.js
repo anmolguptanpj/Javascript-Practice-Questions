@@ -10,28 +10,26 @@ function useStopWatch(){
        if(isRunning){
          intervalref.current = setInterval(()=>{setTime(p=>p+1)},1000)
        }
-       if(!isRunning){
-        clearInterval(intervalref.current)
-       }
 
        return () =>{
         clearInterval(intervalref.current);
+        intervalref.current=null;
        }
     },[isRunning])
-
+    console.log(time)
+    console.log(intervalref)
     const hours = Math.floor(time/3600)
     const minutes = Math.floor((time%3600)/60)
     const seconds = time%60
     const start =()=>{ setIsRunning(true)}
     const stop = ()=>{setIsRunning(false)}
-    const reset = ()=> {setIsRunning(false);
-        clearInterval(intervalref.current)
-        intervalref.current=null
-        setTime(0);
+    const resets = ()=>{setIsRunning(false)
+        setTime(0)
+        console.log("reset button is clicked")
     }
 
     return{
-        hours,minutes,seconds,start,stop,reset,isRunning
+        hours,minutes,seconds,start,stop,resets,isRunning
     }
  
 

@@ -4,11 +4,11 @@ import { useState } from "react";
     const[count,setCount]= useState(inititalState)
 
     const increment = () => {
-        setCount(c=>c+1)
+        count < 20? setCount(prev=>prev+1) : setCount(count)
     }
 
     const decrement = () =>{
-        setCount(c=>c-1)
+        count > 0? setCount(prev=>prev-1) : setCount(count)
     }
 
     const reset = ()=> {

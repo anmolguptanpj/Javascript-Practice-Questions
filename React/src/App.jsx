@@ -8,7 +8,7 @@ import useStopWatch from './hooks/useStopwatch'
 function App() {
   document.title="Anmol"
 
-  const{hours,seconds,minutes,running,stop,start} = useStopWatch()
+  const{hours,seconds,minutes,running,stop,start,resets} = useStopWatch()
 
   const {count,increment,decrement,reset} = useCounter()
   const time = useClock()
@@ -25,7 +25,7 @@ function App() {
  <div> 
   <button onClick={start}>Start</button>
  <button onClick={stop}>Stop</button>
- <button onClick={reset}>Reset</button>
+ <button onClick={resets}>Reset</button>
  </div>
 
 
