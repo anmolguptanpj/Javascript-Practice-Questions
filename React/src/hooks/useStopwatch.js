@@ -4,6 +4,7 @@ function useStopWatch(){
     const[time,setTime]= useState(0)
     const intervalref=useRef(null);
     const[isRunning,setIsRunning]=useState(false);
+    const [values,setValues] = useState([])
 
 
     useEffect(()=>{
@@ -27,6 +28,10 @@ function useStopWatch(){
         setTime(0)
         console.log("reset button is clicked")
     }
+    
+
+
+    
 
     return{
         hours,minutes,seconds,start,stop,resets,isRunning
