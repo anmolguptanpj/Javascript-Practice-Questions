@@ -28,13 +28,15 @@ function useStopWatch(){
         setTime(0)
         console.log("reset button is clicked")
     }
-    
+    const save = ()=>{setValues(prev => [...prev,time]);
+        console.log("saved")
+    }
 
 
     
 
     return{
-        hours,minutes,seconds,start,stop,resets,isRunning
+        hours,minutes,seconds,start,stop,resets,isRunning,save,values
     }
  
 
