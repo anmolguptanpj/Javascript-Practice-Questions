@@ -17,8 +17,7 @@ function useStopWatch(){
         intervalref.current=null;
        }
     },[isRunning])
-    console.log(time)
-    console.log(intervalref)
+
     const hours = Math.floor(time/3600)
     const minutes = Math.floor((time%3600)/60)
     const seconds = time%60
@@ -26,10 +25,8 @@ function useStopWatch(){
     const stop = ()=>{setIsRunning(false)}
     const resets = ()=>{setIsRunning(false)
         setTime(0)
-        console.log("reset button is clicked")
     }
     const save = ()=>{setValues(prev => [...prev,time]);
-        console.log("saved")
     }
 
 
